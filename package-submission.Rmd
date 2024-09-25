@@ -225,7 +225,7 @@ AnnotationDbi.
 
 Annotation packages should *NOT* be posted to the tracker repository.
 Instead send an email to <packages@bioconductor.org> with a
-description of the proposed annotation package and futher instructions
+description of the proposed annotation package and further instructions
 of where to send the package will be provided. Whenever possible Annotation
 Packages should use the `r BiocStyle::Biocpkg("AnnotationHub")` for managing
 files.
@@ -296,13 +296,13 @@ use of existing data in a Bioconductor package. See development section on
 * If in the pre-review process there are identified larger issues with the
   package, a label `3e. pending pre-review changes` or a more specific flag of
   package issue will be assigned. Please address any pre-review identified
-  issues and comment back for the package admininstrators to re-evaluate.
+  issues and comment back for the package administrators to re-evaluate.
 
 * Once your package builds and checks without errors or (avoidable)
   warnings, the package is assigned a reviewer. The package will be
   labelled `2. Review in progress`.
 
-* The reviewr will provide a technical review of your package.  Other
+* The reviewer will provide a technical review of your package.  Other
   _Bioconductor_ developers and users with domain expertise are encouraged to
   provide additional community commentary.  Reviewers will add comments to the
   issue you created.
@@ -314,7 +314,7 @@ use of existing data in a Bioconductor package. See development section on
 * Respond to the issues raised by the reviewers. You _must_ respond to
   the primary reviewer, and are strongly encouraged to consider
   community commentary. Typically your response will involve code
-  modifications; commit these to the default branch of git.bioconductororg. When
+  modifications; commit these to the default branch of git.bioconductor.org. When
   you have addressed all concerns, add a comment to the issue created in step 2
   to explain your response.
 

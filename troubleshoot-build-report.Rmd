@@ -27,7 +27,7 @@ with a valid version bump.
 
 ## How do I reproduce the build system ERROR?
 
-In order to reproduce the ERROR's accuately locally, remember to be using the
+In order to reproduce the ERROR's accurately locally, remember to be using the
 correct version of R and Bioconductor.  The version of R used for the build
 report can be found at the top of the [release][release-software-build-report] and
 [devel][devel-software-build-report] build reports. Once you are using the
@@ -103,8 +103,8 @@ R switched from 3.x to 4.0 which generally means some significant changes.
 - [Scalar / Vector Logic](#scalarvec)
 - [Class ==  vs  is/inherits](#classEq)
   - [Matrix is now Array](#matarr)
-- [data.frame stringAsFactors](#stringsAsFactors)
-- [stats::smoorthEnds](#statsSmoothEnds)
+- [data.frame stringsAsFactors](#stringsAsFactors)
+- [stats::smoothEnds](#statsSmoothEnds)
 - [grid package changes](#grid)
 - [plot generic moved](#plot)
 - [Partial Argument Matching](#partMatch)
@@ -381,7 +381,7 @@ these packages; when they are available, they will be added.
 CRAN packages are occasionally removed. Unfortunately, Bioconductor will only
 allow package dependencies to be actively maintained packages on CRAN or Bioconductor.
 A package will have to alter their package to not utilize code and not rely on this
-dependency. You may of course try to pentition CRAN for reinstatement or reach
+dependency. You may of course try to petition CRAN for reinstatement or reach
 out to the package maintainer to fix and submit to CRAN. Good Luck!
 
 #### Package has been removed from Bioconductor
