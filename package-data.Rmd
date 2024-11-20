@@ -35,7 +35,7 @@ mailing list.
 
 See the [Package Submission guidelines](#bioconductor-package-submissions) for
 further submission procedures and if submitting related or circular dependent
-packages please read [releated package submission procedure][cirdep]
+packages please read [related package submission procedure][cirdep]
 
 ## Adding Data to Existing Package {#adding-data-to-existing-package}
 

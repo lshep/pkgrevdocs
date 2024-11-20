@@ -53,7 +53,7 @@ not accept the issue until both packages are in an accepted state.
 ## Expectations and deadlines {.unnumbered #review-expectations-and-deadlines}
 
 Package[s] will be expected to be reviewed within 3 weeks of assignment and
-producea clean build report from the build machine.  We plan to make a hard
+produce a clean build report from the build machine.  We plan to make a hard
 limit for 3 weeks. If the delay is on the submitter, the issue will be closed
 for inactivity; it will be reopened when a submitter can commit to timely
 updates and engagement of the review process.  If the delay is in the reviewer,
@@ -97,7 +97,7 @@ package they can request someone offer additional comments (including those not
 officially part of the package review list) without explicitly asking for
 reassignment.
 
-Frequent requests for reassignement should consider a longer leave of absence
+Frequent requests for reassignment should consider a longer leave of absence
 agreement with the package review administrator. If frequent requests are being
 made for reassignement the reviewer will be notified and at risk for being
 removed from the active review process. If a reviewer is removed, they must

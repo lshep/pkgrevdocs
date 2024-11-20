@@ -92,7 +92,7 @@ data. There are of course exceptions; please provide reasoning if included.
 All packages must be available via [_Bioconductor_'s biocViews][biocViews] or
 [CRAN][CRAN pkgs]; the use of the `Remotes:` field is not supported, hence dependencies only
 available on other repositories (e.g. <i class="fab fa-github"></i> GitHub) are
-not allowed nor is specifiy an explicit version of a package.
+not allowed nor is specify an explicit version of a package.
 
 Reuse, rather than re-implement or duplicate, well-tested functionality from
 other packages.  Make use of appropriate existing packages (e.g.,

@@ -116,7 +116,7 @@ If appropriate, we strongly encourage a table of contents
 
 ### Evaluated code chunks
 
-Non-trival executable code is a must!!!
+Non-trivial executable code is a must!!!
 
 Static vignettes are not acceptable.
 
