@@ -25,7 +25,7 @@ it is always possible to extend existing classes.
 
 A vignette demonstrates how to accomplish non-trivial tasks embodying the core
 functionality of your package. There are two common types of vignettes.
-  
+
 * (Recommended) An *R markdown* vignette is similar to a *Sweave* vignette, but uses
   [markdown](http://daringfireball.net/projects/markdown/) instead of $\LaTeX$
   for structuring text sections and resulting in HTML output. The `r
@@ -39,7 +39,7 @@ functionality of your package. There are two common types of vignettes.
   class="fab fa-r-project"></i> code. The  code chunk starts with a line
   `<<>>=`, and ends with `@`. Each chunk is evaluated during `R CMD build`,
   prior to $\LaTeX$ compilation to a PDF document.
-  
+
 A vignette provides reproducibility: the vignette produces the same results as
 copying the corresponding commands into an <i class="fab fa-r-project"></i>
 session. It is therefore **essential** that the vignette embed executed <i
@@ -178,15 +178,29 @@ If this option is used it will also be preferable to use `donttest` instead of
 The scripts in this directory can vary.
 
 Most importantly if data was included in the `inst/extdata/` directory, a
-related script must be present in this directory documenting very clearly how
-the data was generated and source information.
+related script must be present in this directory clearly documenting how the
+data was obtained and prepared.
 
-It should include source URLs and any key information regarding filtering or processing.
+It should include any source URLs and information regarding filtering or
+pre-processing.
 
-It can be executable code, sudo code, or a text description.
+It can be executable code, sudo code, or even a text description.
 
-Users should be able to download and be able to roughly reproduce the file or
-object that is present as data.
+Users should be able to download and roughly reproduce the data file or object
+in `inst/extdata/`.
+
+## The `data-raw` directory {#doc-data-raw}
+
+Although the preferred location is `inst/scripts`, the `data-raw` directory may
+be used instead to store scripts that generated data files or objects. Note
+that one potential disadvantage of using the `data-raw` directory is that the
+scripts are not included in the package installation folder (for users to
+inspect).
+
+For more details, see the `Data` chapter in Hadley Wickham's
+[R Packages][r-pkgs].
+
+[r-pkgs]: https://r-pkgs.org/data.html
 
 ## Other {#other-doc}
 
