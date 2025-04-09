@@ -193,6 +193,10 @@ package maintenance responsibilities. Package authors are expected to:
   a dependency should be submitted first; this is generally the associated data
   package to a software package.
 
+* __Note:__ The submitter of the package should also be the listed maintainer so
+  we may verify BiocCredentials.  Additional push access to other contributors
+  may be granted on request. 
+
 ## Experiment Data Packages {#experPackage}
 
 Experimental data packages contain data specific to a particular
