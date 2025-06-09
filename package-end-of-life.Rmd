@@ -135,9 +135,13 @@ devel 3.3 would make the following transitions:
 
 A deprecated package can be un-deprecated and removed from the End of Life
 process if it is fixed before the next Bioconductor release. To have a
-package un-deprecated, please contact <maintainer@bioconductor.org>. If a
-package is already in the defunct stage; the package will mostly likely be
-requested to go through the new package submission process again.
+package un-deprecated, please contact <maintainer@bioconductor.org>; Do not
+un-deprecate a package yourself. If a package is already in the defunct stage;
+the package will mostly likely be requested to go through the new package
+submission process again. Pending the circumstances of removal and if a package
+has been defunct and reinstated in the past, Bioconductor may refuse
+re-submission.
+
 
 ## 'Orphaned' packages
 
