@@ -28,6 +28,7 @@ The functionality should be sufficiently documented in man pages with runnable e
 - [ ] `R CMD check --no-build-vignettes` within 10 minutes.
 - [ ] Memory requirement below 3GB.
 - [ ] Size of individual files <= 5MB.
+- [ ] Size of tarball <= 10MB.
 - [ ] README file.
 
 ## The DESCRIPTION file
