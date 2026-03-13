@@ -1,0 +1,92 @@
+# Common Bioconductor Methods and Classes {#reusebioc}
+
+## Motivation {#bioc-common-motivation}
+
+Bioconductor is a large and diverse project with many packages that provide
+functionality for a wide range of biological data types and statistical methods.
+It has a rich set of classes and methods that are widely used across
+many packages. It is, therefore, important to reuse existing data classes and
+methods to ensure that packages are interoperable with the rest of the
+_Bioconductor_ software ecosystem. Central data representations allow users to
+readily integrate analysis workflows across multiple Bioconductor packages
+providing a more seamless user experience.
+
+Many classes in Bioconductor are implemented using the S4 object-oriented
+system in R. The S4 system is particularly well-suited for the representation
+of complex genomic data structures. The initial motivations to use S4 in
+Bioconductor were centered around its benefits over other systems such as S3.
+These benefits include, but are not limited to, formal class definitions,
+multiple inheritance, and validity checking.
+
+Although Bioconductor promotes the re-use of existing S4 classes to represent
+genomic data, there are cases where new classes are needed for cutting-edge
+technologies. In such cases, new classes should be developed, ideally, with
+open discussion and consideration of the Bioconductor community.
+
+### Use Case: Importing data {#commonimport}
+
+For developers who import data into their package, it is important to know which
+packages and methods are available for reuse. The following list provides
+commonly used packages and their methods to import various data types:
+
++ GTF, GFF, BED, BigWig, etc., -- `r BiocStyle::Biocpkg("rtracklayer")` `::import()`
++ VCF -- `r BiocStyle::Biocpkg("VariantAnnotation")` `::readVcf()`
++ SAM / BAM -- `r BiocStyle::Biocpkg("Rsamtools")` `::scanBam()`,
+  `r BiocStyle::Biocpkg("GenomicAlignments")` `::readGAlignment*()`
++ FASTA -- `r BiocStyle::Biocpkg("Biostrings")` `::readDNAStringSet()`
++ FASTQ -- `r BiocStyle::Biocpkg("ShortRead")` `::readFastq()`
++ MS data (XML-based and mgf formats) -- `r BiocStyle::Biocpkg("Spectra")` `::Spectra()`, 
+  `r BiocStyle::Biocpkg("Spectra")` `::Spectra(source = MsBackendMgf::MsBackendMgf())`
+
+This list is not exhaustive, and developers are encouraged to initiate dialogue
+with other community members to identify additional packages and methods that
+may be useful for their specific use case. We acknowledge that class and method
+discoverability can be a challenge and we are working to improve this aspect of
+the Bioconductor project.
+
+### Common Classes {#commonclass}
+
+The following table, though certainly not exhaustive, provides select classes
+and constructor functions to represent genomic data:
+
+| Data Type                     | Package and Function                                     | Description                                            |
+|-------------------------------|----------------------------------------------------------|--------------------------------------------------------|
+| Rectangular feature by sample | `r BiocStyle::Biocpkg("SummarizedExperiment")` `::SummarizedExperiment()` | RNAseq count matrix, microarray, etc. |
+| Genomic coordinates           | `r BiocStyle::Biocpkg("GenomicRanges")` `::GRanges()` | 1-based, closed interval genomic coordinates |
+| Genomic coordinates (multiple)| `r BiocStyle::Biocpkg("GenomicRanges")` `::GRangesList()` | Genomic coordinates from multiple samples |
+| Ragged genomic coordinates    | `r BiocStyle::Biocpkg("RaggedExperiment")` `::RaggedExperiment()` | Ragged (variable length) genomic coordinates |
+| DNA/RNA/AA sequences          | `r BiocStyle::Biocpkg("Biostrings")` `::*StringSet()` | DNA, RNA, or amino acid sequences |
+| Gene sets | `r BiocStyle::Biocpkg("BiocSet")` `::BiocSet()`, <br>`r BiocStyle::Biocpkg("GSEABase")` `::GeneSet()`, <br>`r BiocStyle::Biocpkg("GSEABase")` `::GeneSetCollection()` | Collections of gene sets |
+| Multi-omics data              | `r BiocStyle::Biocpkg("MultiAssayExperiment")` `::MultiAssayExperiment()` | Data integrating multiple omics assays |
+| Single cell data              | `r BiocStyle::Biocpkg("SingleCellExperiment")` `::SingleCellExperiment()` | Single-cell expression and related data |
+| Mass spec data                | `r BiocStyle::Biocpkg("Spectra")` `::Spectra()` | Mass spectrometry data                               |
+| File formats                  | `r BiocStyle::Biocpkg("BiocIO")` `::BiocFile-class` | Classes for interacting with various biological data file formats |
+
+Search [biocViews][] for other classes and methods that may be useful for your
+package.
+
+## Package Submission Considerations
+
+Bioconductor strives for interoperability across packages, and package
+submissions are generally not accepted unless they demonstrate such
+interoperability, typically by reusing existing Bioconductor classes and
+methods where appropriate. Submissions that introduce new classes or data
+structures must provide strong justification and clearly describe how they
+interoperate with existing Bioconductor infrastructure.
+
+In the case where the data does not conform to an existing data class,
+we recommend discussing the design of a new class with the Bioconductor
+community. The open discussion can take place on main Bioconductor communication
+channels such as the [bioc-devel][bioc-devel-mail] mailing list, or the
+Bioconductor community Slack.
+
+## Package Implementations
+
+The following packages are examples of packages that reuse Bioconductor classes
+and methods:
+
+| package | inherits classes and methods from: |
+|---|---|
+| `r BiocStyle::Biocpkg("DESeq2")` | `r BiocStyle::Biocpkg("SummarizedExperiment")`, `r BiocStyle::Biocpkg("GenomicRanges")` |
+| `r BiocStyle::Biocpkg("GenomicAlignments")` | `r BiocStyle::Biocpkg("GenomicRanges")`, `r BiocStyle::Biocpkg("Rsamtools")` |
+| `r BiocStyle::Biocpkg("VariantAnnotation")` | `r BiocStyle::Biocpkg("GenomicRanges")`, `r BiocStyle::Biocpkg("SummarizedExperiment")`, `r BiocStyle::Biocpkg("Rsamtools")` |
