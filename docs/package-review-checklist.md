@@ -28,6 +28,7 @@ The functionality should be sufficiently documented in man pages with runnable e
 - [ ] Memory requirement below 8GB.
 - [ ] Size of individual files <= 5MB.
 - [ ] Undesirable files. System files like `.DS_Store`, `*.so`, etc. should not be included (see [.gitignore](https://contributions.bioconductor.org/gitignore.html) for a listing)
+- [ ] No renv or renv.lock files. Bioconductor packages need to work with current version of packages and Bioconductor not a static locked version
 
 ## Important Bioconductor Features
 
