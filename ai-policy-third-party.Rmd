@@ -1,0 +1,10 @@
+# AI policy and Third Party Code {#ai-policy-third-party}
+
+If a non-trivial portion of your contribution is copied from somewhere else
+(such as AI-generated or copied from another software project) you are required
+to discuss it in the issue and disclose it in the PR description and provide
+details about the provenance (for example, ‘Assisted-by: Name of AI’ or ‘Code
+copied from: source’). Make sure to cite the provenance in the new code and that
+the newly contributed code can be redistributed under the software/packages
+licensing terms. You will still be responsible for this code, its reliability
+and maintenance within your package.
